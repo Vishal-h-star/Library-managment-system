@@ -1,6 +1,11 @@
 # Library-managment-system
  This is a Library managment api backend for the management of users and the books Here;
 
+## commands
+npm init
+npm i express
+npm i nodemon --save-dev
+
 # Routes and the endpoints
 
 ## /users
