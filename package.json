@@ -1,0 +1,19 @@
+{
+  "name": "library-managment-system",
+  "version": "1.0.0",
+  "description": "Library Managment system  where we can trak users , book , subscription , issued books and fine ammount and penalty",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vishal-h-star/Library-managment-system.git"
+  },
+  "author": "Vishal singh chauhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vishal-h-star/Library-managment-system/issues"
+  },
+  "homepage": "https://github.com/Vishal-h-star/Library-managment-system#readme"
+}
