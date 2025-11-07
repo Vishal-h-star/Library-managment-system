@@ -1,0 +1,84 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "name": "The Silent Patient",
+            "author": "Alex Michaelides",
+            "genre": "Psychological Thriller",
+            "price": 499,
+            "publisher": "Orion Publishing"
+        },
+        {
+            "id": 2,
+            "name": "Atomic Habits",
+            "author": "James Clear",
+            "genre": "Self-help",
+            "price": 350,
+            "publisher": "Penguin Random House"
+        },
+        {
+            "id": 3,
+            "name": "The Alchemist",
+            "author": "Paulo Coelho",
+            "genre": "Fiction",
+            "price": 299,
+            "publisher": "HarperCollins"
+        },
+        {
+            "id": 4,
+            "name": "Rich Dad Poor Dad",
+            "author": "Robert T. Kiyosaki",
+            "genre": "Personal Finance",
+            "price": 399,
+            "publisher": "Warner Books"
+        },
+        {
+            "id": 5,
+            "name": "The 7 Habits of Highly Effective People",
+            "author": "Stephen R. Covey",
+            "genre": "Self-help",
+            "price": 450,
+            "publisher": "Simon & Schuster"
+        },
+        {
+            "id": 6,
+            "name": "To Kill a Mockingbird",
+            "author": "Harper Lee",
+            "genre": "Classic Fiction",
+            "price": 320,
+            "publisher": "J.B. Lippincott & Co."
+        },
+        {
+            "id": 7,
+            "name": "1984",
+            "author": "George Orwell",
+            "genre": "Dystopian Fiction",
+            "price": 275,
+            "publisher": "Secker & Warburg"
+        },
+        {
+            "id": 8,
+            "name": "The Subtle Art of Not Giving a F*ck",
+            "author": "Mark Manson",
+            "genre": "Self-help",
+            "price": 380,
+            "publisher": "HarperOne"
+        },
+        {
+            "id": 9,
+            "name": "Think and Grow Rich",
+            "author": "Napoleon Hill",
+            "genre": "Motivational",
+            "price": 340,
+            "publisher": "The Ralston Society"
+        },
+        {
+            "id": 10,
+            "name": "Sapiens: A Brief History of Humankind",
+            "author": "Yuval Noah Harari",
+            "genre": "History",
+            "price": 499,
+            "publisher": "Harper"
+        }
+    ]
+}

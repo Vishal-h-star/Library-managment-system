@@ -1,0 +1,114 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Amit",
+            "surname": "Sharma",
+            "email": "amit.sharma@example.com",
+            "issueBook": "3",
+            "issueDate": "2025-10-01",
+            "returnDate": "2025-10-15",
+            "subscriptionType": "basic",
+            "subscriptionDate": "2025-09-01"
+        },
+        {
+            "id": 2,
+            "name": "Neha",
+            "surname": "Verma",
+            "email": "neha.verma@example.com",
+            "issueBook": "",
+            "issueDate": "",
+            "returnDate": "",
+            "subscriptionType": "premium",
+            "subscriptionDate": "2025-08-15"
+        },
+        {
+            "id": 3,
+            "name": "Rohit",
+            "surname": "Singh",
+            "email": "rohit.singh@example.com",
+            "issueBook": "1",
+            "issueDate": "2025-10-10",
+            "returnDate": "2025-10-25",
+            "subscriptionType": "standard",
+            "subscriptionDate": "2025-09-10"
+        },
+        {
+            "id": 4,
+            "name": "Priya",
+            "surname": "Gupta",
+            "email": "priya.gupta@example.com",
+            "issueBook": "9",
+            "issueDate": "2025-10-12",
+            "returnDate": "2025-10-27",
+            "subscriptionType": "premium",
+            "subscriptionDate": "2025-07-20"
+        },
+        {
+            "id": 5,
+            "name": "Vikas",
+            "surname": "Yadav",
+            "email": "vikas.yadav@example.com",
+            "issueBook": "",
+            "issueDate": "",
+            "returnDate": "",
+            "subscriptionType": "basic",
+            "subscriptionDate": "2025-08-01"
+        },
+        {
+            "id": 6,
+            "name": "Sneha",
+            "surname": "Patel",
+            "email": "sneha.patel@example.com",
+            "issueBook": "7",
+            "issueDate": "2025-10-05",
+            "returnDate": "2025-10-19",
+            "subscriptionType": "standard",
+            "subscriptionDate": "2025-09-05"
+        },
+        {
+            "id": 7,
+            "name": "Karan",
+            "surname": "Malhotra",
+            "email": "karan.malhotra@example.com",
+            "issueBook": "10",
+            "issueDate": "2025-09-18",
+            "returnDate": "2025-10-02",
+            "subscriptionType": "premium",
+            "subscriptionDate": "2025-08-10"
+        },
+        {
+            "id": 8,
+            "name": "Divya",
+            "surname": "Rao",
+            "email": "divya.rao@example.com",
+            "issueBook": "",
+            "issueDate": "",
+            "returnDate": "",
+            "subscriptionType": "standard",
+            "subscriptionDate": "2025-09-15"
+        },
+        {
+            "id": 9,
+            "name": "Arjun",
+            "surname": "Mehta",
+            "email": "arjun.mehta@example.com",
+            "issueBook": "5",
+            "issueDate": "2025-09-25",
+            "returnDate": "2025-10-09",
+            "subscriptionType": "basic",
+            "subscriptionDate": "2025-07-30"
+        },
+        {
+            "id": 10,
+            "name": "Meera",
+            "surname": "Bansal",
+            "email": "meera.bansal@example.com",
+            "issueBook": "2",
+            "issueDate": "2025-10-02",
+            "returnDate": "2025-10-16",
+            "subscriptionType": "premium",
+            "subscriptionDate": "2025-08-20"
+        }
+    ]
+}
