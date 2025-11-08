@@ -4,8 +4,8 @@
   "description": "Library Managment system  where we can trak users , book , subscription , issued books and fine ammount and penalty",
   "main": "index.js",
   "scripts": {
-     "start":"node index.js",
-     "dev":"nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Vishal-h-star/Library-managment-system#readme",
   "devDependencies": {
     "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
   }
 }
