@@ -111,7 +111,9 @@ router.put('/:id', (req, res) => {
         })
     }
 
+    //  we can also do it like this;
     //  Object.assign(user, data)
+
     const updatedUser = users.map((user) => {
         if (user.id === Number(id)) {
             return {
@@ -123,7 +125,7 @@ router.put('/:id', (req, res) => {
         }
         return user;
     })
-
+    
     console.log("updatedUser", updatedUser)
     res.status(200).json({
         success: true,
