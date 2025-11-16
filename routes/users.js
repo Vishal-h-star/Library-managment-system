@@ -1,5 +1,5 @@
-const  express = require('express')
-const {users}  = require('../Data/user.json')
+const express = require('express')
+const { users } = require('../Data/user.json')
 
 const router = express.Router();
 
@@ -125,7 +125,7 @@ router.put('/:id', (req, res) => {
         }
         return user;
     })
-    
+
     console.log("updatedUser", updatedUser)
     res.status(200).json({
         success: true,
@@ -144,9 +144,9 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
     const { id } = req.params;
     const user = users.find((user) => user.id === Number(id))
-     console.log("user" , user)
+    console.log("user", user)
     if (!user) {
-       return  res.status(404).json({
+        return res.status(404).json({
             success: false,
             message: "User not found by this id"
         })
@@ -155,19 +155,107 @@ router.delete('/:id', (req, res) => {
     // there is one more method 
     // const updatedUser = users.filter( (user) => user.id !== Number(id))
 
-    const userIndex =  users.indexOf(user)
-    if(userIndex > -1){
+    const userIndex = users.indexOf(user)
+    if (userIndex > -1) {
         users.splice(userIndex, 1);
     }
-    
-    console.log("users full data" , users)
+
+    console.log("users full data", users)
 
     res.status(200).json({
-          success:true,
-          message:" User is deleted successfully"
+        success: true,
+        message: " User is deleted successfully"
     })
 
 
 })
+
+// Route: /users/subscription-details/:id
+// Method : GET
+// Description: Getting the subscription-details of user using id
+// Access: public
+// Parameters : Id
+
+router.get('/subscription-details/:id', (req, res) => {
+    const id = Number(req.params.id)
+    const user = users.find((user) => user.id === id)
+    if (!user) {
+        return res.status(404).json({
+            success: false,
+            message: `user not found id: ${id}`
+        })
+    }
+
+    // Extact the subscription details
+
+    const getDateInDays = (data = '') => {
+        let date;
+        if (data) {
+            date = new Date(data)
+        } else {
+            date = new Date()
+        }
+        // It gives days since Jan 1, 1970,
+        let days = Math.floor(date.getTime() / (1000 * 60 * 60 * 24))
+        return days
+    }
+
+    const subscriptionType = (date) => {
+        if (user.subscriptionType === 'basic') {
+            date += 90;
+        } else if (user.subscriptionType === 'standard') {
+            date += 180;
+        } else if (user.subscriptionType === 'premium') {
+            date += 365
+        }
+        return date;
+    }
+
+    //subscription expiration calculation
+    //  jaunary 1,1970 UTC  // milliseconds
+
+    let returnDate = getDateInDays(user.returnDate)
+    let currentDate = getDateInDays()
+    let subscriptionDate = getDateInDays(user.subscriptionDate)
+    let subscriptionExpiration = subscriptionType(subscriptionDate)
+
+
+    const Data = {
+        ...user,
+        subscriptionExpired: subscriptionExpiration < currentDate,
+        subscriptionDaysLeft: subscriptionExpiration - currentDate,
+        DaysAfterReturnDate: returnDate - currentDate,
+        returnDate: returnDate < currentDate ? "Book is overdue" : returnDate,
+        fine: returnDate < currentDate ? subscriptionExpiration <= currentDate ? 180 : 100 : 0,
+    }
+
+
+    // let subscriptionDetails = {
+    //     id: user.id,
+    //     name: user.name,
+    //     subscriptionType: user.subscriptionType,
+    //     subscriptionDate: user.subscriptionDate
+    // }
+
+    // let subscriptionDetails = []
+
+    // users.forEach( (user) =>{
+    //     let details ={
+    //         id : user.id,
+    //         name: user.name,
+    //         subscriptionType: user.subscriptionType,
+    //         subscriptionDate: user.subscriptionDate
+    //     }
+
+    //     subscriptionDetails.push(details)
+    // })
+
+    res.status(200).json({
+        success: true,
+        data: Data
+    })
+})
+
+
 
 module.exports = router;

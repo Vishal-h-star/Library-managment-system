@@ -1,6 +1,6 @@
 const express = require('express')
 const { books } = require('../Data/books.json')
-const {users} = require('../Data/user.json')
+const { users } = require('../Data/user.json')
 
 const router = express.Router()
 
@@ -150,14 +150,14 @@ router.delete('/:id', (req, res) => {
     }
 
     // const remaningBooks = books.filter((book) => book.id !== id)
-    const  bookToremove = books.indexOf(book)
-    if(bookToremove > -1){
-        books.splice(bookToremove , 1)
+    const bookToremove = books.indexOf(book)
+    if (bookToremove > -1) {
+        books.splice(bookToremove, 1)
     }
 
     res.status(200).json({
-         success:true,
-         message: `Book id  ${id} is deleted`
+        success: true,
+        message: `Book id  ${id} is deleted`
     })
 
 
@@ -165,23 +165,48 @@ router.delete('/:id', (req, res) => {
 
 
 // ----------->--------------------->
-// Route: /books/issued
+// Route: /books/issued/for-users
 // Method : GET
 // Description: Get all the issued books
 // Access: public
 // Parameters :  None
 
-router.get("/issued" , (req, res) =>{
-    
-    const userWithIssuedBook = users.filter( (user)=>{
-         if(user.issueBook){
+router.get('/issued/for-users', (req, res) => {
+
+    // each user  to whom book is issued 
+    const userWithIssuedBook = users.filter((user) => {
+        if (user.issueBook) {
             return user
-         }
+        }
     })
-    
+
+    let issueBooks = []
+
+    userWithIssuedBook.forEach((each) => {
+
+        const book = books.find((book) => book.id === Number(each.issueBook))
+
+        // console.log("Book found with same id", book)
+
+        book.issuedBy = each.name
+        book.issuedDate = each.issueDate
+        book.returnDate = each.returnDate
+
+
+        issueBooks.push(book)
+    })
+
+    if (issueBooks.length === 0) {
+        return res.status(404).json({
+            success: false,
+            message: "No book issue yet"
+        })
+    }
+
     res.status(200).json({
-        success:true,
-     })
+        success: true,
+        data: issueBooks,
+    })
 })
 
 
