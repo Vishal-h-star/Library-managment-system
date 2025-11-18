@@ -52,4 +52,18 @@ GET : GET all issued book with their fine amount
  -> If user missed both renewal && subscription then the collected amount shoud be  180 rupe
 
 
+ npm init 
+ npm i express
+ npm i nodemon --save-dev
+
+ npm run dev ->  to  start application
+ 
+ To resoter nodeModules and package-lock.json --> npm i / npm install
+
+ ## Database
+ npm i mongoose  
+
+ npm i dotenv
+
+
 
