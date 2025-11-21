@@ -2,8 +2,9 @@ const express = require('express')
 const { books } = require('../Data/books.json')
 const { users } = require('../Data/user.json')
 
-const router = express.Router()
+const { UserModel , BookModel} = require('../Models')
 
+const router = express.Router()
 // -------->>------------->------------->>
 // Route: /books
 // Method : Get

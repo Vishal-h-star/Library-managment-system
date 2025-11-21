@@ -65,5 +65,11 @@ GET : GET all issued book with their fine amount
 
  npm i dotenv
 
+ ## MVC Arcitecture
+
+>> M: Model        (Structure of our mongodb collection)
+>> V: View         (Frontend)
+>> C: Controllers  (Brain / All logical operations / Login of a route)
+
 
 

@@ -1,7 +1,6 @@
 const express = require('express')
 const { users } = require('./Data/user.json')
 const dotenv = require("dotenv")
-
 // Importing Database connection file
 const Dbconnection =  require('./DataBaseConnection')
 
