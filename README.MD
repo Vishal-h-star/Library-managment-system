@@ -69,7 +69,10 @@ GET : GET all issued book with their fine amount
 
 >> M: Model        (Structure of our mongodb collection)
 >> V: View         (Frontend)
->> C: Controllers  (Brain / All logical operations / Login of a route)
+>> C: Controllers  (Brain / All logical operations / Logic of a route)
+
+### DTO (Data transfer object)
+
 
 
 
